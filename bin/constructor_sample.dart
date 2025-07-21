@@ -1,15 +1,9 @@
 void main()
 {
-
-
 Student s1 = Student(name: "Fays", age: 23, grade: "A+");
 Student s2 = Student(name: "Amar", age: 23, grade: "f");
-
-
-
 s1.displayinfo();
 s1.checkPassStatus();
-
 s2.displayinfo();
 s2.checkPassStatus();
 }

@@ -32,7 +32,7 @@ void main()
   print(v1.speed);
   print(v1.color);
   v1.start();
-  v1.color="blue";
+  v1.color="Green";
   print(v1.color);
 
   print(v2.color);
