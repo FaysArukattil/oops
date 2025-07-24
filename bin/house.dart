@@ -44,7 +44,7 @@ House.twoBedroom({
 })
 {
   noOfHouses++;
-  this.numRooms=2;
+  numRooms=2;
 }
 
 String ownerName;
