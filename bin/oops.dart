@@ -26,6 +26,9 @@ void main()
 //  or  It is a Special method Used to Initialize an Object When it is Created.It runs automatically
 
 // Object - It is an Instance of a class
+
+//static - it is a Single memory allocation
+    // and it is a variable of class
   
   Vehicle v1 =Vehicle();
   Vehicle v2 =Vehicle();
@@ -44,3 +47,10 @@ for(String fruit in fruits)
 print(fruit);
 }
 }
+
+//Pillars of OOps
+
+//Abstraction
+//Encapsulation 
+//Inheritance 
+//Polymorphism 
