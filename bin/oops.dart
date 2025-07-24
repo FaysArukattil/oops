@@ -36,4 +36,11 @@ void main()
   print(v1.color);
 
   print(v2.color);
+
+List fruits=["Apple","Banana","Grapes"];
+
+for(String fruit in fruits)
+{
+print(fruit);
+}
 }
