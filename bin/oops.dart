@@ -54,3 +54,15 @@ print(fruit);
 //Encapsulation 
 //Inheritance 
 //Polymorphism 
+
+
+//Types of Inheritance
+
+
+
+//single a->b
+//multilevel a->b b->c
+//Hierarchial a->b a->c a->d
+
+//Hybrid  x   a->b a->c b->d c->d
+//multiple  x    a->c b->c
