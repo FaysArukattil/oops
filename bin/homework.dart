@@ -10,8 +10,8 @@ c1.displayCarInfo();
 }
 class Vehicle
 {
-  String? brand;
-  int? year;
+  String brand;
+  int year;
   Vehicle({required this.brand,required this.year});
 
   displayInfo()
@@ -23,7 +23,7 @@ class Vehicle
 
 class Car extends Vehicle
 {
-  int? seats;
+  int seats;
   Car({required super.brand,required super.year,required this.seats});
 
     displayCarInfo()
