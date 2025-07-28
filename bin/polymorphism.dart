@@ -24,5 +24,7 @@ class Student extends Person
   @override
   void printDetails() {
    print("Iam a Student");
+   super.printDetails();
   }
+  
 }
