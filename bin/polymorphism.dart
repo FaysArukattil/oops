@@ -1,6 +1,6 @@
 //polymorphism
 
-//method Overloading  X (Not in Dart) : Writing the Same name method in a Single Class by Simply Changing the Parameters.
+//method Overloading  X (Not in Dart) : Writing the Same name method in a Single Class by Simply Changing the Arguments.
 
 //method Overriding : Writing the Same name method on an inherited class using @override
 
