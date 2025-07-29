@@ -32,39 +32,82 @@
 //   }
 // }
 
-class Shape {
-  void area() {
-    print("Calaculating Area of Shape....");
-  }
+// class Shape {
+//   void area() {
+//     print("Calaculating Area of Shape....");
+//   }
 
-  Shape();
-}
+//   Shape();
+// }
 
-class Rectangle extends Shape {
-  int length, breadth;
-  Rectangle({required this.length, required this.breadth});
+// class Rectangle extends Shape {
+//   int length, breadth;
+//   Rectangle({required this.length, required this.breadth});
 
-  @override
-  void area() {
-    print("Area of Rectangle is ${length * breadth}");
-  }
-}
+//   @override
+//   void area() {
+//     print("Area of Rectangle is ${length * breadth}");
+//   }
+// }
 
-class Circle extends Shape {
-  int radius;
-  @override
-  void area() {
-    print("Area of Circle is ${3.14 * radius * radius}");
-  }
+// class Circle extends Shape {
+//   int radius;
+//   @override
+//   void area() {
+//     print("Area of Circle is ${3.14 * radius * radius}");
+//   }
 
-  Circle({required this.radius});
-}
+//   Circle({required this.radius});
+// }
 
+// void main() {
+//   Shape s1 = Shape();
+//   Rectangle r1 = Rectangle(breadth: 5, length: 6);
+//   Circle c1 = Circle(radius: 10);
+//   s1.area();
+//   r1.area();
+//   c1.area();
+// }
+
+// Create an abstract class Payment that contains:
+// 	•	An abstract method processPayment(double amount)
+// 	•	A concrete method generateReceipt() that prints "Receipt generated."
+
+// Then, create two child classes:
+// 	1.	CreditCardPayment – implements processPayment() with a message like "Processing credit card payment of $amount".
+// 	2.	UPIPayment – implements processPayment() with a message like "Processing UPI payment of $amount".
+// Finally, create objects of each class and call both methods.
+
+//Output
+
+// Processing credit card payment of 1500.0
+// Receipt generated.
+// Processing UPI payment of 900.0
+// Receipt generated.
 void main() {
-  Shape s1 = Shape();
-  Rectangle r1 = Rectangle(breadth: 5, length: 6);
-  Circle c1 = Circle(radius: 10);
-  s1.area();
-  r1.area();
-  c1.area();
+  Payment credit = CreditCardPayment();
+  Payment upi = UPIPayment();
+  credit.processPayment(1500);
+  upi.processPayment(900);
+}
+
+abstract class Payment {
+  void processPayment(double amount);
+  void generateReceipt() {
+    print("Generated Reciept");
+  }
+}
+
+class CreditCardPayment extends Payment {
+  @override
+  void processPayment(double amount) {
+    print("Processing credit card payment of $amount");
+  }
+}
+
+class UPIPayment extends Payment {
+  @override
+  void processPayment(double amount) {
+    print("Processing UPI payment of $amount");
+  }
 }
