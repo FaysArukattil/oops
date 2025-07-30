@@ -84,30 +84,114 @@
 // Receipt generated.
 // Processing UPI payment of 900.0
 // Receipt generated.
-void main() {
-  Payment credit = CreditCardPayment();
-  Payment upi = UPIPayment();
-  credit.processPayment(1500);
-  upi.processPayment(900);
-}
+// void main() {
+//   Payment credit = CreditCardPayment();
+//   Payment upi = UPIPayment();
+//   credit.processPayment(1500);
+//   upi.processPayment(900);
+// }
 
-abstract class Payment {
-  void processPayment(double amount);
-  void generateReceipt() {
-    print("Generated Reciept");
-  }
-}
+// abstract class Payment {
+//   void processPayment(double amount);
+//   void generateReceipt() {
+//     print("Generated Reciept");
+//   }
+// }
 
-class CreditCardPayment extends Payment {
-  @override
-  void processPayment(double amount) {
-    print("Processing credit card payment of $amount");
-  }
-}
+// class CreditCardPayment extends Payment {
+//   @override
+//   void processPayment(double amount) {
+//     print("Processing credit card payment of $amount");
+//   }
+// }
 
-class UPIPayment extends Payment {
-  @override
-  void processPayment(double amount) {
-    print("Processing UPI payment of $amount");
+// class UPIPayment extends Payment {
+//   @override
+//   void processPayment(double amount) {
+//     print("Processing UPI payment of $amount");
+//   }
+// }
+
+//qn
+// Create a class named LibraryBook with the following:
+
+// ✅ Private Properties:
+// 	•	_title (String) – title of the book
+// 	•	_author (String) – author of the book
+// 	•	_isAvailable (bool) – whether the book is currently available or not
+
+// ✅ Constructor:
+// 	•	Accepts title and author, sets _isAvailable to true by default.
+
+// ✅ Methods:
+// 	1.	borrowBook() – Marks the book as not available if it is currently available.
+// 	2.	returnBook() – Marks the book as available again.
+// 	3.	displayStatus() – Prints whether the book is available or borrowed.
+
+// ✅ Getters:
+// 	•	title – Returns the title
+// author – Returns the author
+// 	•	isAvailable – Returns availability status
+
+// Notes:
+
+// 	•	No direct access or mutation of private variables from outside.
+// 	•	Do not use setters. Control access only through methods and getters.
+
+// sample output
+
+// 📚 Book Details:
+// Title: The Alchemist
+// Author: Paulo Coelho
+// Status: Available
+
+// 📖 Borrowing the book...
+// Book borrowed successfully!
+
+// 📚 Book Details:
+// Title: The Alchemist
+// Author: Paulo Coelho
+// Status: Not Available
+
+// 📦 Returning the book...
+// Book returned successfully!
+
+// 📚 Book Details:
+// Title: The Alchemist
+// Author: Paulo Coelho
+// Status: Available
+
+void main() {}
+
+class LibraryBook {
+  final String _title;
+  final String _author;
+  bool _isAvailable = true;
+  LibraryBook(this._title, this._author);
+
+  borrowBook(String title) {
+    if (title == _title) {
+      print("Borrowing the Book...");
+      _isAvailable = false;
+      print("Book Borrowed Succesfully!\n");
+    }
   }
+
+  returnBook(String title) {
+    if (title == _title) {
+      print("Returning the Book...");
+      _isAvailable = true;
+      print("Book Returned Succesfully!\n");
+    }
+  }
+
+  displayStatus() {
+    print("Title: $_title");
+    print("Author: $_author");
+    print("Status: ${_isAvailable ? "isAvailable\n" : "isNotAvailable\n"}");
+  }
+
+  String get title => _title;
+  String get author => _author;
+  bool get isAvailable => _isAvailable;
 }
